@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="315.0" prefWidth="482.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Левая сторона -->
+    <Pane>
+        <Label fx:id="tempInfoLabel" layoutY="25.0" />
+        <Label fx:id="tempFeelsLabel" layoutY="55.0" />
+        <Label fx:id="tempMaxLabel" layoutY="85.0" />
+        <Label fx:id="tempMinLabel" layoutX="2.0" layoutY="115.0" />
+        <Label fx:id="pressureLabel" layoutY="145.0" />
+        <Label fx:id="windSpeedLabel" layoutY="175.0" />
+        <Label fx:id="windDirectionLabel" layoutY="205.0" />
+        <Label fx:id="humidityLabel" layoutY="235.0" />
+        <Label fx:id="descriptionLabel" layoutY="265.0" />
+    </Pane>
+
+    <!-- Правая сторона -->
+    <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="239.0" spacing="10">
+        <Label text="Введите параметры" />
+
+        <Label text="Город" />
+        <TextField fx:id="cityField" prefHeight="26.0" prefWidth="209.0" promptText="Город" />
+        <Label text="Дата" />
+        <DatePicker fx:id="datePicker" />
+        <Button fx:id="getDataButton" onAction="#getData" text="Отправить запрос" />
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <HBox.margin>
+         <Insets left="200.0" />
+      </HBox.margin>
+    </VBox>
+
+</HBox>
